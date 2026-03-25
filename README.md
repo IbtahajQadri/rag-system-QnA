@@ -1,4 +1,4 @@
-# 🚗 Euro NCAP Safety Standards Q&A
+# RAG-based Automotive Safety Standards Q&A
  
 A Retrieval-Augmented Generation (RAG) system that allows engineers and researchers to query official Euro NCAP automotive safety documentation using natural language. Built with LangChain, FAISS, OpenAI and Streamlit.
  
@@ -144,7 +144,7 @@ The vector index is stored locally rather than using a cloud vector database. Th
 ## 📁 Project Structure
  
 ```
-automotive-rag/
+RAG-EuroNCAP-Safety-QA/
 │
 ├── data/                        # Euro NCAP PDF documents
 │
