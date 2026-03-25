@@ -53,7 +53,7 @@ The system is built on 5 official Euro NCAP Safety Assist protocols:
  
 **1. Clone the repository**
 ```bash
-git clone git@github.com:IbtahajQadri/rag-system-Q&A.git
+git clone git@github.com:IbtahajQadri/RAG-EuroNCAP-Safety-QA.git
 cd rag-system-Q&A
 ```
  
