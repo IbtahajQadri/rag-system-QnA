@@ -149,12 +149,12 @@ automotive-rag/
 ├── data/                        # Euro NCAP PDF documents
 │
 ├── experiments/                 # Development scripts (staged build)
-│   ├── stage2_load_chunks.py    # PDF loading and chunking
+│   ├── load_chunks.py           # PDF loading and chunking
 │   ├── faiss_embeddings.py      # Embeddings and vector store
 │   ├── retrieval.py             # Q&A retrieval chain
 │   └── stage5_app.py            # Streamlit chat interface
 │
-├── assets/                      # Screenshots for README
+├── assets/                      # Screenshot
 │   └── demo.png
 │
 ├── faiss_index/                 # Generated vector index (not tracked)
