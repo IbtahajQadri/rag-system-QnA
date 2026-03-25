@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 st.title("🚗 Euro NCAP Safety Standards Q&A")
-st.caption("Knowledge base: Euro NCAP Assessment Protocol – Safety Assist & Collision Avoidance (v10.4.1, February 2024)")
+st.caption("Knowledge base: Euro NCAP Assessment Protocol – Safety Assist 2026")
 
 
 @st.cache_resource
@@ -27,7 +27,7 @@ def load_retriever():
         embeddings,
         allow_dangerous_deserialization=True
     )
-    return vectorstore.as_retriever(search_type="similarity_score_threshold",search_kwargs={"k": 3, "score_threshold": 0.5})
+    return vectorstore.as_retriever(search_type="similarity_score_threshold",search_kwargs={"k": 3, "score_threshold": 0.4})
 
 @st.cache_resource
 def load_llm():
@@ -43,7 +43,6 @@ You are an automotive safety expert assistant.
 Use ONLY the following context to answer the question.
 If the answer is not contained in the context, say:
 "I could not find this information in the provided documents."
-Always mention which page the information came from.
 
 Context:
 {context}
@@ -115,9 +114,9 @@ if query:
                 # Display sources in expandable section
                 with st.expander("📄 Most Relevant Source"):
                     
-
-                    st.write(f"**{os.path.basename(top_source.metadata['source'])} — Page {top_source.metadata['page']}:**")
-                    st.write(top_source.page_content[:300] + "...")
+                    st.write(f"**{os.path.basename(top_source.metadata['source'])}")
+                    st.write(f"**Extract:**")
+                    st.write(top_source.page_content[:600] + "...")
 
     # Save answer to history
     st.session_state.messages.append({
